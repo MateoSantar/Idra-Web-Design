@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>title</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>h1</h1>
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left">ID</th>
+          <th style="text-align: left">NAME</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>juan</td>
+        </tr>
+
+        <tr>
+          <td>2</td>
+          <td>pppp</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td><input /></td>
+          <td><input /></td>
+          <td><button id="AddBtn">ADD</button></td>
+        </tr>
+      </tfoot>
+    </table>
+    <script>
+      window.onload = () => {
+        document.getElementsByTagName("input")[0].focus();
+      };
+      document.getElementById("AddBtn").onclick = () => {
+        const inputs = document.getElementsByTagName("input");
+        const id = inputs[0].value;
+        const name = inputs[1].value;
+        if (id && name) {
+          const tableBody = document.querySelector("tbody");
+          const newRow = tableBody.insertRow(tableBody.rows.length - 1);
+          newRow.insertCell(0).innerText = id;
+          newRow.insertCell(1).innerText = name;
+          inputs[0].value = "";
+          inputs[1].value = "";
+          inputs[0].focus();
+        }
+      };
+    </script>
+  </body>
+</html>
