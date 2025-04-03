@@ -5,28 +5,20 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <h1>h1</h1>
-    <table>
+    <h1>Bienvenido a mi pagina de diseño web</h1>
+    <table style="border: 1px solid black;">
       <thead>
         <tr>
-          <th style="text-align: left">ID</th>
-          <th style="text-align: left">NAME</th>
-          <th></th>
+          <th style="text-align: left;">ID</th>
+          <th style="text-align: left;">NAME</th>
+          <th style="text-align: left;">PHONE</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>1</td>
-          <td>juan</td>
-        </tr>
-
-        <tr>
-          <td>2</td>
-          <td>pppp</td>
-        </tr>
       </tbody>
       <tfoot>
         <tr>
+          <td><input /></td>
           <td><input /></td>
           <td><input /></td>
           <td><button id="AddBtn">ADD</button></td>
@@ -41,18 +33,25 @@
         const inputs = document.getElementsByTagName("input");
         const id = inputs[0].value;
         const name = inputs[1].value;
-        if (id && name) {
+        const cellphone = inputs[2].value;
+        if (id && name && cellphone) {
           const tableBody = document.querySelector("tbody");
-          const newRow = tableBody.insertRow(tableBody.rows.length - 1);
+          const newRow = tableBody.insertRow(tableBody.rows.length);
           newRow.insertCell(0).innerText = id;
           newRow.insertCell(1).innerText = name;
-          inputs[0].value = "";
-          inputs[1].value = "";
-          inputs[0].focus();
+          newRow.insertCell(2).innerText = cellphone; 
+          Clear(inputs);
         }else{
           alert("Please fill in all fields.");
         }
       };
+      
+      function Clear(inputs) {
+          inputs[0].value = "";
+          inputs[1].value = "";
+          inputs[2].value = "";
+          inputs[0].focus();
+      }
     </script>
   </body>
 </html>
