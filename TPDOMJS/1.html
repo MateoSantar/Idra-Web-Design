@@ -1,0 +1,18 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>TP</title> 
+</head> 
+<body> 
+    <!-- Insertar el string "Hello World" dentro del elemento <p> -->
+    <p id="myP"></p> 
+    <button id="helloWorldBtn">Agregar Hola Mundo</button>
+    <script>
+        helloWorldBtn.addEventListener("click", function() {
+            var helloWorldBtn = document.getElementById("helloWorldBtn");
+            var myP = document.getElementById("myP");
+            myP.innerText = "Hola Mundo";
+        });
+    </script>
+</body> 
+</html>

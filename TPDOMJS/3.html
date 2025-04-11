@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>TP</title> 
+</head> 
+<body> 
+    <!-- Agregar funcionalidad a los botones para modificar la tabla: 
+    a. Cuando haga click en el botón “Insert row” se deberá agregar una fila al final de la tabla. 
+    b. Cuando haga click en el botón “Delete row” se deberá borrar la última fila agregada -->
+    <table style="border: 1px solid"> 
+        <thead> 
+            <tr> 
+                <th>Header 1</th> 
+                <th>Header 2</th> 
+            </tr> 
+        </thead> 
+        <tbody></tbody> 
+    </table> 
+    <br> 
+    <button onclick="insertRow()">Insert row</button> 
+    <button onclick="deleteRow()">Delete row</button> 
+
+    <script>
+        function insertRow() {
+            const tableBody = document.querySelector('tbody')
+            const newRow = tableBody.insertRow()
+            const cell1 = newRow.insertCell(0)
+            const cell2 = newRow.insertCell(1)
+            const maxLenght = tableBody.rows.length
+            cell1.innerHTML = `Row ${maxLenght} Cell 1`
+            cell2.innerHTML = `Row ${maxLenght} Cell 2`
+            
+        }
+        function deleteRow() {
+            const tableBody = document.querySelector('tbody')
+            const lastRow = tableBody.rows.length - 1
+            if (lastRow >= 0) {
+                tableBody.deleteRow(lastRow)
+            } else {
+                alert('No more rows to delete')
+            }
+        }
+    </script>
+</body> 
+</html>

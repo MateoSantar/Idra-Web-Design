@@ -1,0 +1,21 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+    <title>TP</title> 
+</head> 
+<body> 
+    <!-- Insertar el string "Hello World" dentro del primer elemento que tenga la clase “test”-->
+    <p class="test"></p> 
+    <p class="test"></p> 
+    <button id="helloWorldBtn">Agregar Hola Mundo</button>
+    <script>
+        helloWorldBtn.addEventListener("click", function() {
+            var helloWorldBtn = document.getElementById("helloWorldBtn");
+            var testElements = document.getElementsByClassName("test");
+            if (testElements.length > 0) {
+                testElements[0].innerText = "Hola Mundo";
+            }
+        });
+    </script>
+</body> 
+</html>
