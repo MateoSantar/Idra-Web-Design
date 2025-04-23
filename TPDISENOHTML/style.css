@@ -17,11 +17,13 @@
 
 * {
   color: white;
+  user-select: none;
 }
 
 body {
   background-color: #3c3741;
   font-family: Arial, sans-serif;
+  margin: 10px;
 }
 header {
   position: relative;
@@ -128,6 +130,9 @@ aside span {
   color: rgb(255, 6, 6);
   font-size: 20px;
   margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -163,8 +168,10 @@ aside span {
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 10px;
+  padding-left: 2em;
+  padding-right: 2em;
   margin-bottom: 10px;
-  width: 90%;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -178,7 +185,7 @@ aside span {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   justify-content: flex-start;
   gap: 10px;
   height: fit-content;
@@ -194,6 +201,34 @@ aside span {
   text-decoration: underline;
   margin: 0;
   padding: 5px;
+}
+
+@keyframes details-show {
+  from {
+    opacity:0;
+    transform: var(--details-translate, translateY(-0.5em));
+  }
+}
+
+details[open] > *:not(summary) {
+  animation: details-show 0.2s ease-in-out;
+}
+
+
+.newCard summary {
+  
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: fit-content;
+  height: fit-content;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.newCard summary:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
 }
 
 .news img {
