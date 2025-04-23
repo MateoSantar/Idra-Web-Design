@@ -165,7 +165,6 @@ aside span {
 
 
 .news {
-  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 10px;
   padding-left: 2em;
@@ -178,7 +177,7 @@ aside span {
 }
 
 .newCard {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 10px;
@@ -188,7 +187,7 @@ aside span {
   align-items: left;
   justify-content: flex-start;
   gap: 10px;
-  height: fit-content;
+  height: 100%;
   box-shadow: 0 0 10px #000000;
 }
 
