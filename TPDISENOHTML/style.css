@@ -248,6 +248,20 @@ details[open] > *:not(summary) {
   color: black;
 }
 
+.newCard .currentStatusP {
+  animation: currentStatusAnimation 0.8s ease-in-out infinite alternate;
+}
+
+@keyframes currentStatusAnimation {
+  0% {
+    filter: drop-shadow(0 0 5px #0000ff);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #ff0000);
+  }
+}
+
+
 .news img {
   width: 100%;
   height: auto;
