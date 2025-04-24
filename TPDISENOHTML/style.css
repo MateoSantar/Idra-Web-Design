@@ -47,10 +47,22 @@ header {
 }
 
 header h2 {
-  border-top: white 1px solid;
-  border-bottom: white 1px solid;
   padding: 5px;
   filter: drop-shadow(0 0 5px #000000);
+  border-right: 2px solid white;
+  white-space: nowrap;
+  text-align: end;
+  overflow: hidden;
+  animation: escribir 12s steps(140) 1 normal both, parpadeo .7s step-end infinite;
+}
+
+@keyframes escribir {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes parpadeo {
+  50% { border-color: transparent; }
 }
 
 a {
