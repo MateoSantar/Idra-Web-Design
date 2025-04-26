@@ -283,3 +283,45 @@ footer {
   border-top: 2px solid #444;
   margin-top: 20px;
 }
+
+.ojo {
+  width: 500px;
+  height: 320px;
+  background: rgba(0, 0, 0, 0.037);
+  border: 4px solid black;
+  border-radius: 50% / 50%;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  filter: opacity(0.5) blur(5px);
+  
+}
+
+.iris {
+  width: 120px;
+  height: 120px;
+  background: #ffffff2e;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: top 0.1s, left 0.1s;
+  transition: transform 0.2s ease;
+}
+
+.pupila {
+  width: 40px;
+  height: 40px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s ease;
+}
+
