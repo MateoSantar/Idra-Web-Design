@@ -11,9 +11,9 @@
     const y = e.clientY - centerY;
 
     // Mover el iris (como antes)
-    const maxMove = 100;
-    const distanceX = Math.max(-maxMove, Math.min(maxMove, x / 2));
-    const distanceY = Math.max(-maxMove, Math.min(maxMove, y / 2));
+    const maxMove = 200;
+    const distanceX = Math.max(-maxMove, Math.min(maxMove, x));
+    const distanceY = Math.max(-maxMove, Math.min(maxMove, y ));
     iris.style.left = `calc(50% + ${distanceX}px)`;
     iris.style.top = `calc(50% + ${distanceY}px)`;
 
@@ -21,11 +21,15 @@
     const distance = Math.sqrt(x * x + y * y);
 
     // Cambiar tamaño de la pupila según distancia
-    if (distance < 120) {
+    if (distance < 200) {
       pupila.style.transform = "translate(-50%, -50%) scale(1.5)";
       iris.style.transform = "translate(-50%, -50%) scale(1.6)";
     } else {
       pupila.style.transform = "translate(-50%, -50%) scale(1)";
       iris.style.transform = "translate(-50%, -50%) scale(1)";
+     
     }
   });
+
+
+  
