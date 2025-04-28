@@ -23,7 +23,7 @@
 body {
   background-color: #3c3741;
   font-family: Arial, sans-serif;
-  margin: 10px;
+  margin: 0;
 }
 header {
   position: relative;
@@ -297,6 +297,12 @@ footer {
   transform: translate(-50%, -50%);
   z-index: -1;
   filter: opacity(0.5) blur(5px);
+  transition: all 0.2s ease-in-out;
+}
+
+.cerrado{
+  height: 15px;
+  margin-top: 50px;
 }
 
 .iris {
