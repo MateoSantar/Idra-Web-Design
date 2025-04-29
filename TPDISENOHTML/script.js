@@ -41,7 +41,7 @@ function parpadear() {
 }
 
 function iniciarParpadeo() {
-  const intervalo = Math.random() * 3000 + 3000; // entre 3000 y 6000 ms
+  const intervalo = Math.random() * 3000 + 3000; 
   setTimeout(() => {
     parpadear();
     iniciarParpadeo();
